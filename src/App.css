@@ -1,0 +1,45 @@
+.relative {
+  position: relative;
+}
+
+#equa {
+  position: absolute;
+  height: 86vh;
+  bottom: -397px;
+  left: 36px;
+}
+
+#equalizerMobile {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  #equa {
+    display: none;
+  }
+
+  #equalizerMobile {
+    display: block;
+    position: absolute;
+    height: 340px;
+    top: 495px;
+  }
+}
+
+.secondEqua {
+  position: relative;
+}
+
+#equaOpacity {
+  position: absolute;
+  height: 83vh;
+  top: -781px;
+  left: 79px;
+  z-index: 6;
+  opacity: 50%;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
