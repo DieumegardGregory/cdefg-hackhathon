@@ -5,8 +5,8 @@
 #equa {
   position: absolute;
   height: 86vh;
-  top: 124px;
-  left: 24px;
+  bottom: -397px;
+  left: 36px;
 }
 
 #equalizerMobile {
@@ -24,4 +24,22 @@
     height: 340px;
     top: 495px;
   }
+}
+
+.secondEqua {
+  position: relative;
+}
+
+#equaOpacity {
+  position: absolute;
+  height: 83vh;
+  top: -781px;
+  left: 79px;
+  z-index: 6;
+  opacity: 50%;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
 }

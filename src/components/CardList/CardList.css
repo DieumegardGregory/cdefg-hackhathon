@@ -16,6 +16,7 @@
   /* backdrop-filter: blur(5px); */
   width: 260px;
   height: 400px;
+  z-index: 99;
 }
 
 .headerCard {
@@ -50,40 +51,50 @@ video {
 .Card.sad {
   box-shadow: 10px 10px 10px hsl(197, 97%, 35%);
   border: solid 3px hsl(197, 97%, 35%);
+  background-color: white;
 }
 .Card.happy {
   box-shadow: 10px 10px 10px hsl(34, 100%, 60%);
   border: solid 3px hsl(34, 100%, 60%);
+  background-color: white;
 }
 .Card.angry {
   box-shadow: 10px 10px 10px hsl(300, 100%, 31%);
   border: solid 3px hsl(300, 100%, 31%);
+  background-color: white;
 }
 .Card.sporty {
   box-shadow: 10px 10px 10px hsl(113, 67%, 51%);
   border: solid 3px hsl(113, 67%, 51%);
+  background-color: white;
 }
 .Card.epic {
   box-shadow: 10px 10px 10px #c3922e;
   border: solid 3px #c3922e;
+  background-color: white;
 }
 .Card.chlid {
   box-shadow: 10px 10px 10px hsl(293, 66%, 73%);
   border: solid 3px hsl(293, 66%, 73%);
+  background-color: white;
 }
 .Card.calm {
   box-shadow: 10px 10px 10px hsl(123, 66%, 83%);
   border: solid 3px hsl(123, 66%, 83%);
+  background-color: white;
 }
 .Card.romance {
   box-shadow: 10px 10px 10px hsl(323, 90%, 52%);
   border: solid 3px hsl(323, 90%, 52%);
+  background-color: white;
 }
 .Card.comedy {
   box-shadow: 10px 10px 10px hsl(54, 100%, 50%);
   border: solid 3px hsl(54, 92%, 50%);
+  background-color: white;
 }
 .Card.hot {
   box-shadow: 10px 10px 10px hsl(0, 100%, 44%);
   border: solid 3px hsl(0, 100%, 44%);
+  background-color: white;
 }
