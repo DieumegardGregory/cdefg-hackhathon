@@ -6,11 +6,13 @@ import logo from "../assets/logo-header-01.png";
 export default function Header({ title }) {
   return (
     <div className="header-container">
-      <img src={logo} alt="logo-header" className="logo-header" />
+      <Link to="/">
+        <img src={logo} alt="logo-header" className="logo-header" />
+      </Link>
       <h1>{title}</h1>
       <header>
         <Link to="/mood">
-          <button type="button" className="button-mood"></button>{" "}
+          <button type="button" className="button-mood"></button>
         </Link>
         <Link to="/party">
           <button type="button" className="button-party"></button>
