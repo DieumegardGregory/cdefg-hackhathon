@@ -6,7 +6,10 @@
   position: absolute;
   height: 86vh;
   bottom: -397px;
-  left: 36px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
 #equalizerMobile {
@@ -37,6 +40,7 @@
   left: 79px;
   z-index: 6;
   opacity: 50%;
+  margin: auto;
 }
 
 .logo {
