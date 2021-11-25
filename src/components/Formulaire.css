@@ -1,0 +1,70 @@
+form {
+  padding: 1rem;
+  width: 60%;
+  height: 30rem;
+  margin: auto;
+  border-radius: 15px;
+  font-size: 25px;
+}
+
+.Name-LastName {
+  display: flex;
+  justify-content: space-between;
+}
+.demiColonneR,
+.demiColonneL {
+  width: 45%;
+}
+
+input {
+  background-color: rgb(238, 225, 225);
+  border: 1px solid;
+  height: 2rem;
+}
+textarea {
+  background-color: rgb(238, 225, 225);
+  border: 1px solid;
+  height: 10rem;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  border-color: #807e7a;
+}
+
+label {
+  margin-top: 2rem;
+}
+
+.Submit {
+  font-size: 1em;
+  color: hsl(300, 100%, 31%);
+  border-radius: 5rem;
+  padding: 1rem;
+  margin: 20px auto;
+  cursor: pointer;
+  display: flex;
+  box-shadow: 0 0.5em;
+  background-color: rgb(238, 225, 225);
+}
+
+button:hover {
+  transform: translateY(3px);
+}
+
+button:active {
+  background-color: hsl(300, 45%, 74%);
+  color: hsl(300, 100%, 31%);
+  box-shadow: 0 0.1em;
+  transform: translateY(7px);
+}
+
+@media screen and (max-width: 400px) {
+  form {
+    width: 80%;
+  }
+}

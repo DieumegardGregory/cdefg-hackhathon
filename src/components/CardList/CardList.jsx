@@ -56,7 +56,7 @@ export default function CardList() {
     }
   return (
     <div className="CardList">
-      <div className="Card">
+      <div className="Card sad">
         <div className="headerCard">
           <p>
             <img src="assets/mood-sad-01.png" alt="sad" />
@@ -68,7 +68,7 @@ export default function CardList() {
           <img className="mood-thumbnail" src="https://i.ytimg.com/vi/nQDJfnrGq5A/mqdefault.jpg" alt="sad-thumbnail" />
         </div>
       </div>
-      <div className="Card">
+      <div className="Card happy">
         <div className="headerCard">
           <p>
             <img src="assets/mood-happy-01.png" alt="happy" />
@@ -80,7 +80,7 @@ export default function CardList() {
           <img className="mood-thumbnail" src="https://i.ytimg.com/vi/MWKki0K5yCM/mqdefault.jpg" alt="happy thumbnail" />
         </div>
       </div>
-      <div className="Card">
+      <div className="Card angry">
         <div className="headerCard">
           <p>
             <img src="assets/mood-angry-01.png" alt="angry" />
@@ -92,7 +92,7 @@ export default function CardList() {
         <img className="mood-thumbnail" src="https://i.ytimg.com/vi/7PSS1i-mgFI/mqdefault.jpg" alt="angry thumbnail" />
         </div>
       </div>
-      <div className="Card">
+      <div className="Card sporty">
         <div className="headerCard">
           <p>
             <img src="assets/mood-sport-01.png" alt="sporty" />
@@ -104,7 +104,7 @@ export default function CardList() {
         <img className="mood-thumbnail" src="https://i.ytimg.com/vi/04LoyBnywRY/mqdefault.jpg" alt="sport thumbnail" />
         </div>
       </div>
-      <div className="Card">
+      <div className="Card epic">
         <div className="headerCard">
           <p>
             <img src="assets/mood-epic-01.png" alt="epic" />
@@ -116,7 +116,7 @@ export default function CardList() {
         <img className="mood-thumbnail" src="https://i.ytimg.com/vi/LqOfPkHGq9U/mqdefault.jpg" alt="epic thumbnail" />
         </div>
       </div>
-      <div className="Card">
+      <div className="Card chlid">
         <div className="headerCard">
           <p>
             <img src="assets/mood-chlid-01.png" alt="childish" />
@@ -128,7 +128,7 @@ export default function CardList() {
         <img className="mood-thumbnail" src="https://i.ytimg.com/vi/KFpNvN3nQDw/mqdefault.jpg" alt="childish thumbnail" />
         </div>
       </div>
-      <div className="Card">
+      <div className="Card calm">
         <div className="headerCard">
           <p>
             <img src="assets/mood-calm-01.png" alt="calm" />
@@ -140,10 +140,10 @@ export default function CardList() {
         <img className="mood-thumbnail" src="https://i.ytimg.com/vi/44uRirC7vLw/mqdefault.jpg" alt="calm thumbnail" />
         </div>
       </div>
-      <div className="Card">
+      <div className="Card romance">
         <div className="headerCard">
           <p>
-            <img src="assets/mood-romance-01.png" alt="romantic" />
+            <img src="assets/mood-romance-01.png" alt="romance" />
           </p>
           <p>Romantic</p>
         </div>
@@ -152,10 +152,10 @@ export default function CardList() {
         <img className="mood-thumbnail" src="https://i.ytimg.com/vi/W18nAXue7hM/mqdefault.jpg" alt="romantic thumbnail" />
         </div>
       </div>
-      <div className="Card">
+      <div className="Card comedy">
         <div className="headerCard">
           <p>
-            <img src="assets/mood-comedy-01.png" alt="comic" />
+            <img src="assets/mood-comedy-01.png" alt="comedy" />
           </p>
           <p>Comic</p>
         </div>
@@ -164,7 +164,7 @@ export default function CardList() {
         <img className="mood-thumbnail" src="https://i.ytimg.com/vi/pOmu0LtcI6Y/mqdefault.jpg" alt="comedy thumbnail" />
         </div>
       </div>
-      <div className="Card">
+      <div className="Card hot">
         <div className="headerCard">
           <p>
             <img src="assets/mood-hot-01.png" alt="hot" />
