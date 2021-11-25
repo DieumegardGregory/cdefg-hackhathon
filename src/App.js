@@ -5,9 +5,9 @@ import equalizer from "./assets/background-01.png";
 function App() {
   return (
     <div className="App">
-      <footer className="footer">
+      <div className="relative">
         <img src={equalizer} alt="Equalizer" id="equa" />
-      </footer>
+      </div>
     </div>
   );
 }
