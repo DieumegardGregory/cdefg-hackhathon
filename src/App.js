@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import HeaderHome from "./components/HeaderHome";
+=======
+import { Routes, Route } from 'react-router-dom';
+import MoodSelector from './components/MoodSelector/MoodSelector';
+import './App.css';
+>>>>>>> feature/moodselector
 
 function App() {
   const moodTitle = "What's your mood ?";
@@ -9,6 +15,7 @@ function App() {
   const contactTitle = "Contact us";
   return (
     <div className="App">
+<<<<<<< HEAD
       <Routes>
         <Route
           path="/"
@@ -43,6 +50,9 @@ function App() {
           }
         />
       </Routes>
+=======
+     <MoodSelector />
+>>>>>>> feature/moodselector
     </div>
   );
 }
