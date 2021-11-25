@@ -1,4 +1,9 @@
 body {
-  background: linear-gradient(grey, white);
+  background: rgb(149, 149, 149);
+  background: linear-gradient(
+    180deg,
+    rgba(149, 149, 149, 1) 10%,
+    rgba(255, 255, 255, 1) 30%
+  );
   height: 98vh;
 }
