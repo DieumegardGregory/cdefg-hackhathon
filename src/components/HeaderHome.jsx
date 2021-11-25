@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function HeaderHome() {
   return (
     <div className="header-container">
-      <header>
+      <header className="header-home">
         <Link to="/mood">
           <button type="button" className="button-mood"></button>{" "}
         </Link>

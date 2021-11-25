@@ -4,6 +4,9 @@ import Header from "./components/Header";
 import HeaderHome from "./components/HeaderHome";
 
 function App() {
+  const moodTitle = "What's your mood ?";
+  const partyTitle = "Choose your event";
+  const contactTitle = "Contact us";
   return (
     <div className="App">
       <Routes>
@@ -19,7 +22,7 @@ function App() {
           path="/mood"
           element={
             <div>
-              <Header />
+              <Header title={moodTitle} />
             </div>
           }
         />
@@ -27,7 +30,7 @@ function App() {
           path="/party"
           element={
             <div>
-              <Header />
+              <Header title={partyTitle} />
             </div>
           }
         />
@@ -35,7 +38,7 @@ function App() {
           path="/contact"
           element={
             <div>
-              <Header />
+              <Header title={contactTitle} />
             </div>
           }
         />
