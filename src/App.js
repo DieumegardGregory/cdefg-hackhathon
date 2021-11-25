@@ -1,5 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
+
+import equalizer from "./assets/background-01.png";
+import Formulaire from "./components/Formulaire";
 import CardList from "./components/CardList/CardList";
 import Header from "./components/Header";
 import HeaderHome from "./components/HeaderHome";
@@ -18,6 +21,9 @@ function App() {
           element={
             <div>
               <HeaderHome />
+              <div className="relative">
+                <img src={equalizer} alt="Equalizer" id="equa" />
+              </div>
             </div>
           }
         />
@@ -43,6 +49,7 @@ function App() {
           element={
             <div>
               <Header title={contactTitle} />
+              <Formulaire />
             </div>
           }
         />
