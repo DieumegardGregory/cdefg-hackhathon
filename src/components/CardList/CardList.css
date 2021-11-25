@@ -17,7 +17,7 @@
   margin: 0 3em 3em 0;
   /* backdrop-filter: blur(5px); */
   width: 260px;
-  height: 350px;
+  height: 400px;
 }
 
 .headerCard {
@@ -42,6 +42,8 @@ video {
   border: solid 1px hsl(15, 3%, 70%);
   border-radius: 5px;
   margin: auto;
-  width: 80%;
+  width: 90%;
+  height: auto;
+  margin-top: 3rem;
   cursor: pointer;
 }
