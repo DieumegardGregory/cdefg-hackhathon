@@ -1,20 +1,30 @@
 form {
-  background-color: hsl(123, 66%, 83%);
+  padding: 1rem;
+  width: 60%;
+  height: 30rem;
   margin: auto;
-  width: 50%;
   border-radius: 15px;
-  box-shadow: 10px 10px 10px hsl(113, 67%, 51%);
-  border: solid 3px hsl(113, 67%, 51%);
+  font-size: 25px;
 }
 
-.demiColonneR {
-  width: 45%;
-  float: right;
+.Name-LastName {
+  display: flex;
+  justify-content: space-between;
 }
-
+.demiColonneR,
 .demiColonneL {
   width: 45%;
-  float: left;
+}
+
+input {
+  background-color: rgb(238, 225, 225);
+  border: 1px solid;
+  height: 2rem;
+}
+textarea {
+  background-color: rgb(238, 225, 225);
+  border: 1px solid;
+  height: 10rem;
 }
 
 #lastName, #firstName{
@@ -30,22 +40,17 @@ input{
 label, 
 textarea {
   display: block;
-  width: 95%;
-  height: auto;
-  border: 5px;
+  width: 100%;
   border-radius: 5px;
-  font-size: 1.1em;
-  margin: 1rem;
+  border-color: #807e7a;
 }
-.email {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
+
+label {
+  margin-top: 2rem;
 }
 
 #Submit {
   font-size: 1em;
-  background-color: hsl(293, 66%, 73%);
   color: hsl(300, 100%, 31%);
   border-radius: 5rem;
   padding: 1rem;
@@ -53,16 +58,16 @@ textarea {
   cursor: pointer;
   display: flex;
   box-shadow: 0 0.5em;
+  background-color: rgb(238, 225, 225);
 }
 
 button:hover {
-  box-shadow: 0.1em 0.3em #hsl(197, 97%, 35%);;
-  transform: translateY(5px);
+  transform: translateY(3px);
 }
 
 button:active {
-  background-color: hsl(197, 97%, 35%);
-  color: hsl(197, 97%, 35%);
+  background-color: hsl(300, 45%, 74%);
+  color: hsl(300, 100%, 31%);
   box-shadow: 0 0.1em;
   transform: translateY(7px);
 }
@@ -71,8 +76,4 @@ button:active {
   form {
     width: 80%;
   }
-}
-input,
-textarea {
-  height: auto;
 }

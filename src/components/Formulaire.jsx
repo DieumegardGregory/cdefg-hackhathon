@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import './Formulaire.css';
-
+import React, { useState } from "react";
+import "./Formulaire.css";
 
 const Formulaire = () => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleFirstNameChange = (e) => setFirstName(e.target.value);
   const handleLastNameChange = (e) => setLastName(e.target.value);
@@ -17,27 +16,29 @@ const Formulaire = () => {
     <form>
       <h2>Contact-us</h2>
       <div className="containerForm">
-        <div className="demiColonneL">
-          <label htmlFor="firstName">
-            First Name
-            <input
-              type="texte"
-              id="firstName"
-              value={firstName}
-              onChange={handleFirstNameChange}
-            />
-          </label>
-        </div>
-        <div className="demiColonneR">
-          <label htmlFor="lastName">
-            Last Name
-            <input
-              type="texte"
-              id="lastName"
-              value={lastName}
-              onChange={handleLastNameChange}
-            />
-          </label>
+        <div className="Name-LastName">
+          <div className="demiColonneL">
+            <label htmlFor="firstName">
+              First Name
+              <input
+                type="texte"
+                id="firstName"
+                value={firstName}
+                onChange={handleFirstNameChange}
+              />
+            </label>
+          </div>
+          <div className="demiColonneR">
+            <label htmlFor="lastName">
+              Last Name
+              <input
+                type="texte"
+                id="lastName"
+                value={lastName}
+                onChange={handleLastNameChange}
+              />
+            </label>
+          </div>
         </div>
         <div>
           <label htmlFor="email" className="email">
@@ -61,7 +62,9 @@ const Formulaire = () => {
           />
         </label>
       </div>
-      <button id="Submit" type="button">Submit</button>
+      <button className="Submit" type="button">
+        Submit
+      </button>
     </form>
   );
 };
