@@ -1,33 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 59aded64eaa5ca45c7dfe54d0e8682c243e79589
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import CardList from "./components/CardList/CardList";
 import Header from "./components/Header";
 import HeaderHome from "./components/HeaderHome";
-<<<<<<< HEAD
-=======
-import { Routes, Route } from 'react-router-dom';
-import MoodSelector from './components/MoodSelector/MoodSelector';
-import './App.css';
->>>>>>> feature/moodselector
-=======
-
->>>>>>> 59aded64eaa5ca45c7dfe54d0e8682c243e79589
+import MoodSelector from "./components/MoodSelector/MoodSelector";
+import "./App.css";
 
 function App() {
   const moodTitle = "What's your mood ?";
-  const partyTitle = "Choose your event";
+  const partyTitle = "Choose your event !";
   const contactTitle = "Contact us";
   return (
     <div className="App">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 59aded64eaa5ca45c7dfe54d0e8682c243e79589
       <Routes>
         <Route
           path="/"
@@ -63,12 +47,6 @@ function App() {
           }
         />
       </Routes>
-<<<<<<< HEAD
-=======
-     <MoodSelector />
->>>>>>> feature/moodselector
-=======
->>>>>>> 59aded64eaa5ca45c7dfe54d0e8682c243e79589
     </div>
   );
 }
