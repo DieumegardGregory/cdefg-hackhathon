@@ -1,9 +1,9 @@
 import React from "react";
-import ".CardList/CardList.css";
+import "./CardList/CardList.css";
 
 export default function PartyList() {
   return (
-    <div className="CardList">
+    <div className="card-party-list">
       <div className="Card happy">
         <div className="headerCard">
           <p>
