@@ -5,6 +5,7 @@
 >>>>>>> 59aded64eaa5ca45c7dfe54d0e8682c243e79589
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import CardList from "./components/CardList/CardList";
 import Header from "./components/Header";
 import HeaderHome from "./components/HeaderHome";
 <<<<<<< HEAD
@@ -41,6 +42,7 @@ function App() {
           element={
             <div>
               <Header title={moodTitle} />
+              <CardList />
             </div>
           }
         />
