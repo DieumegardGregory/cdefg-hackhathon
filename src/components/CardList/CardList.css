@@ -1,0 +1,47 @@
+.CardList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 95%;
+  margin: auto;
+}
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: space-between;
+  box-shadow: 10px 10px 10px hsl(0, 0%, 60%);
+  border: solid 1px hsl(5, 70%, 90%);
+  border-radius: 5px;
+  margin: 0 3em 3em 0;
+  /* backdrop-filter: blur(5px); */
+  width: 260px;
+  height: 350px;
+}
+
+.headerCard {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.headerCard img {
+  width: 8rem;
+}
+
+p {
+  display: flex;
+  align-items: flex-end;
+  font-size: 25px;
+}
+
+video {
+  display: flex;
+  box-shadow: 10px 10px 10px hsl(0, 0%, 60%);
+  border: solid 1px hsl(15, 3%, 70%);
+  border-radius: 5px;
+  margin: auto;
+  width: 80%;
+  cursor: pointer;
+}
