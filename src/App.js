@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import CardList from "./components/CardList/CardList";
 import Header from "./components/Header";
 import HeaderHome from "./components/HeaderHome";
 
@@ -23,6 +24,7 @@ function App() {
           element={
             <div>
               <Header title={moodTitle} />
+              <CardList />
             </div>
           }
         />
