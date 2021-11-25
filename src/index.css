@@ -1,5 +1,32 @@
+@font-face {
+  font-family: "Dosis";
+  src: local("Dosis"), url(./assets/Dosis-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Dosis";
+  font-style: bold;
+  src: local("Dosis"), url(./assets/Dosis-Bold.ttf) format("truetype");
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Ubuntu';
+  font-family: "Dosis";
+}
+
+h1 {
+  font-family: "Dosis";
+  font-style: bold;
+}
+
+h2 {
+  font-family: "Dosis";
+  font-style: bold;
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 17pt;
+  }
 }
