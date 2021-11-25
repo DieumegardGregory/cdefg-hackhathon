@@ -7,6 +7,7 @@ import CardList from "./components/CardList/CardList";
 import Header from "./components/Header";
 import HeaderHome from "./components/HeaderHome";
 import MoodSelector from "./components/MoodSelector/MoodSelector";
+import Formulaire from "./components/Formulaire";
 import "./App.css";
 
 
@@ -53,6 +54,7 @@ function App() {
           element={
             <div>
               <Header title={contactTitle} />
+              <Formulaire/>
             </div>
           }
         />

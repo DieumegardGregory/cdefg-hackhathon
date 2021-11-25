@@ -60,19 +60,8 @@ const Formulaire = () => {
             onChange={handleMessageChange}
           />
         </label>
-        {/* <div className="checkbox">
-          <label htmlFor="newsletter">
-            <input
-              type="checkbox"
-              id="newsletter"
-              value={newsletter}
-              onChange={handleNewsletterChange}
-            />
-            Subscribe to the newsletter
-          </label>
-        </div> */}
       </div>
-      <button className="Submit" type="button">Submit</button>
+      <button id="Submit" type="button">Submit</button>
     </form>
   );
 };
