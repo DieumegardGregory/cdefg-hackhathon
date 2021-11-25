@@ -1,0 +1,89 @@
+.CardList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 95%;
+  margin: auto;
+}
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: space-between;
+  border-radius: 15px;
+  margin: 0 3em 3em 0;
+  /* backdrop-filter: blur(5px); */
+  width: 260px;
+  height: 400px;
+}
+
+.headerCard {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.headerCard img {
+  width: 8rem;
+}
+
+p {
+  display: flex;
+  align-items: flex-end;
+  font-size: 25px;
+}
+
+video {
+  display: flex;
+  box-shadow: 10px 10px 10px hsl(0, 0%, 60%);
+  border: solid 1px hsl(15, 3%, 70%);
+  border-radius: 5px;
+  margin: auto;
+  width: 90%;
+  height: auto;
+  margin-top: 3rem;
+  cursor: pointer;
+  background-color: black;
+}
+
+.Card.sad {
+  box-shadow: 10px 10px 10px hsl(197, 97%, 35%);
+  border: solid 3px hsl(197, 97%, 35%);
+}
+.Card.happy {
+  box-shadow: 10px 10px 10px hsl(34, 100%, 60%);
+  border: solid 3px hsl(34, 100%, 60%);
+}
+.Card.angry {
+  box-shadow: 10px 10px 10px hsl(300, 100%, 31%);
+  border: solid 3px hsl(300, 100%, 31%);
+}
+.Card.sporty {
+  box-shadow: 10px 10px 10px hsl(113, 67%, 51%);
+  border: solid 3px hsl(113, 67%, 51%);
+}
+.Card.epic {
+  box-shadow: 10px 10px 10px #c3922e;
+  border: solid 3px #c3922e;
+}
+.Card.chlid {
+  box-shadow: 10px 10px 10px hsl(293, 66%, 73%);
+  border: solid 3px hsl(293, 66%, 73%);
+}
+.Card.calm {
+  box-shadow: 10px 10px 10px hsl(123, 66%, 83%);
+  border: solid 3px hsl(123, 66%, 83%);
+}
+.Card.romance {
+  box-shadow: 10px 10px 10px hsl(323, 90%, 52%);
+  border: solid 3px hsl(323, 90%, 52%);
+}
+.Card.comedy {
+  box-shadow: 10px 10px 10px hsl(54, 100%, 50%);
+  border: solid 3px hsl(54, 92%, 50%);
+}
+.Card.hot {
+  box-shadow: 10px 10px 10px hsl(0, 100%, 44%);
+  border: solid 3px hsl(0, 100%, 44%);
+}
