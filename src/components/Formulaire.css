@@ -1,0 +1,73 @@
+Form {
+  background-color: rgb(193, 241, 231);
+  padding: 1rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+.demiColonneR {
+  width: 45%;
+  float: right;
+}
+
+.demiColonneL {
+  width: 45%;
+  float: left;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 5px;
+  border-radius: 5px;
+  border-color: #c3922E;
+  font-size: 1.1em;
+}
+
+/* .email {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+} */
+
+.Submit {
+  font-size: 1em;
+  background-color: rgb(235, 106, 240);
+  color: rgb(81, 19, 83);
+  border-radius: 5rem;
+  padding: 1rem;
+  margin: 20px auto;
+  cursor: pointer;
+  display: flex;
+  box-shadow: 0 0.5em;
+}
+
+button:hover {
+  box-shadow: 0.1em 0.3em #261711;
+  transform: translateY(3px);
+}
+
+button:active {
+  background-color: #90755d;
+  color: #261711;
+  box-shadow: 0 0.1em;
+  transform: translateY(7px);
+}
+form {
+  width: 50%;
+}
+
+@media screen and (max-width: 400px) {
+  form {
+    width: 80%;
+  }
+}
+input,
+textarea {
+  height: auto;
+}
