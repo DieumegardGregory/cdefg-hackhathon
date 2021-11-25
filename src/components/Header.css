@@ -1,0 +1,107 @@
+.header-container {
+  width: 100vw;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  margin-right: 20px;
+  width: 248px;
+  height: 100px;
+  padding-left: 10px;
+  display: flex;
+  background-image: url("../assets/button-line-01.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.header-home {
+  position: absolute;
+  right: 0;
+}
+
+.logo-header {
+  width: 20vw;
+  max-width: 250px;
+}
+
+header button {
+  width: 80px;
+  height: 80px;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+header button:hover {
+  cursor: pointer;
+  opacity: 1;
+  -webkit-animation: flash 1.5s;
+  animation: flash 1.5s;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.button-mood {
+  background-image: url("../assets/botton-mood-01.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.button-party {
+  background-image: url("../assets/button-party-01.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.button-contact {
+  background-image: url("../assets/button-contact-01.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media screen and (max-width: 568px) {
+  .logo-header {
+    display: none;
+  }
+
+  header {
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    display: none;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .header-container {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 568px) {
+  h2 {
+    display: none;
+  }
+}
