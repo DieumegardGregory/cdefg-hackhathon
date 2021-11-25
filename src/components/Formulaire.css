@@ -1,20 +1,30 @@
-Form {
-  background-color: rgb(193, 241, 231);
+form {
   padding: 1rem;
+  width: 60%;
+  height: 30rem;
+  margin: auto;
+  border-radius: 15px;
+  font-size: 25px;
 }
 
-h2 {
-  text-align: center;
+.Name-LastName {
+  display: flex;
+  justify-content: space-between;
 }
-
-.demiColonneR {
-  width: 45%;
-  float: right;
-}
-
+.demiColonneR,
 .demiColonneL {
   width: 45%;
-  float: left;
+}
+
+input {
+  background-color: rgb(238, 225, 225);
+  border: 1px solid;
+  height: 2rem;
+}
+textarea {
+  background-color: rgb(238, 225, 225);
+  border: 1px solid;
+  height: 10rem;
 }
 
 label,
@@ -22,52 +32,39 @@ input,
 textarea {
   display: block;
   width: 100%;
-  height: auto;
-  border: 5px;
   border-radius: 5px;
-  border-color: #c3922E;
-  font-size: 1.1em;
+  border-color: #807e7a;
 }
 
-/* .email {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-} */
+label {
+  margin-top: 2rem;
+}
 
 .Submit {
   font-size: 1em;
-  background-color: rgb(235, 106, 240);
-  color: rgb(81, 19, 83);
+  color: hsl(300, 100%, 31%);
   border-radius: 5rem;
   padding: 1rem;
   margin: 20px auto;
   cursor: pointer;
   display: flex;
   box-shadow: 0 0.5em;
+  background-color: rgb(238, 225, 225);
 }
 
 button:hover {
-  box-shadow: 0.1em 0.3em #261711;
   transform: translateY(3px);
 }
 
 button:active {
-  background-color: #90755d;
-  color: #261711;
+  background-color: hsl(300, 45%, 74%);
+  color: hsl(300, 100%, 31%);
   box-shadow: 0 0.1em;
   transform: translateY(7px);
-}
-form {
-  width: 50%;
 }
 
 @media screen and (max-width: 400px) {
   form {
     width: 80%;
   }
-}
-input,
-textarea {
-  height: auto;
 }

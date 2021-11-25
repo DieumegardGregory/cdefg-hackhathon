@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 95%;
+  width: 100%;
   margin: auto;
 }
 
@@ -21,7 +21,6 @@
   align-items: space-between;
   border-radius: 15px;
   margin: 0 3em 3em 0;
-  /* backdrop-filter: blur(5px); */
   width: 260px;
   height: 400px;
   z-index: 99;
