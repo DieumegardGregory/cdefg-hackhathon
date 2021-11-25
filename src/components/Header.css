@@ -1,0 +1,68 @@
+.header-container {
+  width: 100vw;
+  height: 100px;
+  background-color: aquamarine;
+  padding-top: 20px;
+}
+
+header {
+  position: absolute;
+  margin-right: 20px;
+  right: 0;
+  width: 248px;
+  height: 150px;
+  padding-left: 10px;
+  display: flex;
+  background-image: url("../assets/button-line-01.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+header button {
+  width: 80px;
+  height: 80px;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+header button:hover {
+  cursor: pointer;
+  opacity: 1;
+  -webkit-animation: flash 1.5s;
+  animation: flash 1.5s;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.button-mood {
+  background-image: url("../assets/botton-mood-01.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.button-party {
+  background-image: url("../assets/button-party-01.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.button-contact {
+  background-image: url("../assets/button-contact-01.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
