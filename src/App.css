@@ -4,8 +4,24 @@
 
 #equa {
   position: absolute;
-  position: absolute;
   height: 86vh;
-  top: 128px;
-  left: 6px;
+  top: 124px;
+  left: 24px;
+}
+
+#equalizerMobile {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  #equa {
+    display: none;
+  }
+
+  #equalizerMobile {
+    display: block;
+    position: absolute;
+    height: 340px;
+    top: 495px;
+  }
 }
