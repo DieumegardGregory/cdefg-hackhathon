@@ -3,10 +3,12 @@ import "./App.css";
 import CardList from "./components/CardList/CardList";
 import Header from "./components/Header";
 import HeaderHome from "./components/HeaderHome";
+import MoodSelector from "./components/MoodSelector/MoodSelector";
+import "./App.css";
 
 function App() {
   const moodTitle = "What's your mood ?";
-  const partyTitle = "Choose your event";
+  const partyTitle = "Choose your event !";
   const contactTitle = "Contact us";
   return (
     <div className="App">
