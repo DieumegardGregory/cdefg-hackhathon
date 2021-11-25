@@ -1,14 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-
 import equalizer from "./assets/background-01.png";
-
 import CardList from "./components/CardList/CardList";
 import Header from "./components/Header";
 import HeaderHome from "./components/HeaderHome";
 import MoodSelector from "./components/MoodSelector/MoodSelector";
-import "./App.css";
-
+import PartyList from "./components/PartyList";
 
 function App() {
   const moodTitle = "What's your mood ?";
@@ -16,18 +13,15 @@ function App() {
   const contactTitle = "Contact us";
   return (
     <div className="App">
-
-     
-
       <Routes>
         <Route
           path="/"
           element={
             <div>
               <HeaderHome />
-     <div className="relative">
-        <img src={equalizer} alt="Equalizer" id="equa" />
-      </div>
+              <div className="relative">
+                <img src={equalizer} alt="Equalizer" id="equa" />
+              </div>
             </div>
           }
         />
@@ -45,6 +39,7 @@ function App() {
           element={
             <div>
               <Header title={partyTitle} />
+              <PartyList />
             </div>
           }
         />
