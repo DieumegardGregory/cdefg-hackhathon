@@ -36,14 +36,32 @@ p {
   font-size: 25px;
 }
 
-video {
+.thumbnail {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   box-shadow: 10px 10px 10px hsl(0, 0%, 60%);
   border: solid 1px hsl(15, 3%, 70%);
   border-radius: 5px;
   margin: auto;
   width: 90%;
-  height: auto;
+  height: 40%;
   margin-top: 3rem;
+}
+
+.play {
+  position: absolute;
+  height: 100px;
+  width: 100px;
   cursor: pointer;
 }
+
+.mood-thumbnail {
+  height: 95%;
+  width: 95%;
+}
+
+/* .hidden-player {
+  visibility: hidden;
+} */
