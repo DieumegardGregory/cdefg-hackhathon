@@ -1,17 +1,41 @@
-import React from "react";
-import { useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from "react";
 import ReactPlayer from "react-player";
 import axios from 'axios';
 import "../Weather.css";
 import "./CardList.css";
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 
 export default function CardList() {
+  const slideRef = useRef();
+  const style = {
+    textAlign: "center",
+    background: "teal",
+    padding: "200px 0",
+    fontSize: "30px",
+  };
+  const properties = {
+    autoplay: false,
+    arrows: false,
+    infinite: true,
+  };
+
+  // The "goBack()" method shows the previous slide while "goNext()" shows the next slide. The "goTo(index)" method goes to a particular index. It takes an integer as the parameter.
+  const back = () => {
+    slideRef.current.goBack();
+  };
+  const next = () => {
+    slideRef.current.goNext();
+  };
+  const goto = ({ target }) => {
+    slideRef.current.goTo(parseInt(target.value, 10));
+  };
   
-    const API_KEY = 'AIzaSyD_uh3m3hom9GvzZ84yUSFhXX2GLR-07uw';
-    const [mood, setMood] = useState('');
-    const [playMode, setPlayMode] = useState(false);
-    const [playlists, setPlaylists] = useState([]);
-    const [rain, setRain] = useState("Card sad");
+  const API_KEY = 'AIzaSyD_uh3m3hom9GvzZ84yUSFhXX2GLR-07uw';
+  const [mood, setMood] = useState('');
+  const [playMode, setPlayMode] = useState(false);
+  const [playlists, setPlaylists] = useState([]);
+  const [rain, setRain] = useState("Card sad");
     
    useEffect(() => {
    axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&order=rating&q=${mood}%20songs&key=${API_KEY}`)
@@ -22,54 +46,56 @@ export default function CardList() {
   .catch((err)=> console.error(err.message))
     }, [mood]);
 
-    const handleSad = () => {
+
+  const handleSad = () => {
       setMood('sad+');
       setRain("Card sad weather rain");
       setPlayMode(!playMode);
     }
-    const handleHappy = () => {
+  const handleHappy = () => {
       setMood('goodmood+');
       setPlayMode(!playMode);
     }
-    const handleAngry = () => {
+  const handleAngry = () => {
       setMood('rage+');
       setPlayMode(!playMode);
     }
-    const handleSport = () => {
+  const handleSport = () => {
       setMood('training+workout+');
       setPlayMode(!playMode);
     }
-    const handleEpic = () => {
+  const handleEpic = () => {
       setMood('epic+');
       setPlayMode(!playMode);
     }
-    const handleChildish = () => {
+  const handleChildish = () => {
       setMood('childrensong+');
       setPlayMode(!playMode);
     }
-    const handleRomantic = () => {
+  const handleRomantic = () => {
       setMood('love+');
       setPlayMode(!playMode);
     }
-    const handleCalm = () => {
+  const handleCalm = () => {
       setMood('zen+');
       setPlayMode(!playMode);
     }
-    const handleComic = () => {
+  const handleComic = () => {
       setMood('songs+funny+');
       setPlayMode(!playMode);
     }
-    const handleHot = () => {
+  const handleHot = () => {
       setMood('seduction+');
       setPlayMode(!playMode);
     }
-    const handleStop = () => {
+  const handleStop = () => {
       setPlayMode(!playMode);
       setMood('');
     }
 
   return (
     <div className="CardList">
+      <div className="desktop">
       <div className={rain}>
         <div className="headerCard">
           <p>
@@ -196,19 +222,21 @@ export default function CardList() {
           <p>Hot</p>
         </div>
         <div className="thumbnail">
-        {playMode ? <img className="stop" src="assets/stop.png" alt="stop-btn" onClick={handleStop}/> :
+         {playMode ? <img className="stop" src="assets/stop.png" alt="stop-btn" onClick={handleStop}/> :
           <img className="play" src="assets/play.png" alt="play-btn" onClick={handleHot}/>}
-        <img className="mood-thumbnail" src="https://i.ytimg.com/vi/OjholJBpYic/mqdefault.jpg" alt="hot thumbnail" />
-        </div>
-        </div>
+          <img
+            className="mood-thumbnail"
+            src="https://i.ytimg.com/vi/OjholJBpYic/mqdefault.jpg"
+            alt="hot thumbnail"
+          />
+         </div>
+       </div>
+  </div>
         {mood !== '' ? 
         <div className="hidden-player">
            
           <ReactPlayer playing={true} url={playlists[0].id.videoId ? `https://www.youtube.com/watch?v=${playlists[0].id.videoId}` : 'https://www.youtube.com/watch?v=Jl8fV1jUQPs'} 
-            /> 
-          
-            </div> 
-            : null}
+            /> </div> : null}
       </div>
   );
 }

@@ -63,7 +63,7 @@ function App() {
           element={
             <div>
               <Header title={contactTitle} />
-              <Formulaire />
+              <Formulaire/>
             </div>
           }
         />

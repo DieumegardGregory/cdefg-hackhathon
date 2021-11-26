@@ -129,13 +129,21 @@ p {
   background-color: white;
 }
 
-
 .mood-thumbnail {
   height: 95%;
   width: 95%;
 }
 
-/* .hidden-player {
+.hidden-player {
   visibility: hidden;
-} */
+}
 
+@media screen and (max-width: 400px) {
+  .mobile {
+    display: block;
+    background-color: blueviolet;
+  }
+  .desktop {
+    display: none;
+  }
+}
