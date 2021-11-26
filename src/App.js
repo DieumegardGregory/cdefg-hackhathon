@@ -26,11 +26,11 @@ function App() {
                 <img src={logoAccueil} alt="logo accueil" id="logoAccueil" />
               </div>
               <div className="relative">
-                <img src={equalizer} alt="Equalizer" id="equa" />
+                <img src={equalizer} alt="Equalizer" id="equalizerAccueil" />
                 <img
                   src={equalizerMobile}
                   alt="Equalizer"
-                  id="equalizerMobile"
+                  id="equalizerMobileAccueil"
                 />
               </div>
             </div>
@@ -42,8 +42,13 @@ function App() {
             <div>
               <Header title={moodTitle} />
               <CardList />
-              <div className="secondEqua">
-                <img src={equalizer} alt="Equalizer" id="equaOpacity" />
+              <div className="equalizer2">
+                <img src={equalizer} alt="Equalizer" id="equalizerCard" />
+                <img
+                  src={equalizerMobile}
+                  alt="Equalizer"
+                  id="equalizerMobileCard"
+                />
               </div>
             </div>
           }
@@ -53,6 +58,15 @@ function App() {
           element={
             <div>
               <Header title={partyTitle} />
+              <PartyList />
+              <div className="equalizer3">
+                <img src={equalizer} alt="Equalizer" id="equalizerParty" />
+                <img
+                  src={equalizerMobile}
+                  alt="Equalizer"
+                  id="equalizerMobileParty"
+                />
+              </div>
             </div>
           }
         />
@@ -62,6 +76,14 @@ function App() {
             <div>
               <Header title={contactTitle} />
               <Formulaire />
+              <div className="equalizer4">
+                <img src={equalizer} alt="Equalizer" id="equalizerForm" />
+                <img
+                  src={equalizerMobile}
+                  alt="Equalizer"
+                  id="equalizerMobileForm"
+                />
+              </div>
             </div>
           }
         />
