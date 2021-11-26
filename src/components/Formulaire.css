@@ -5,6 +5,8 @@ form {
   margin: auto;
   border-radius: 15px;
   font-size: 25px;
+  z-index: 99;
+  position: relative;
 }
 
 .Name-LastName {

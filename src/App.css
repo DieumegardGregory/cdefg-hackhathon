@@ -1,27 +1,29 @@
+/* Equalizer Page Accueil. Comprenant: version desktop et mobile */
+
 .relative {
   position: relative;
 }
 
-#equa {
+#equalizerAccueil {
   position: absolute;
   height: 86vh;
-  bottom: -397px;
+  bottom: -398px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
 }
 
-#equalizerMobile {
+#equalizerMobileAccueil {
   display: none;
 }
 
 @media only screen and (max-width: 800px) {
-  #equa {
+  #equalizerAccueil {
     display: none;
   }
 
-  #equalizerMobile {
+  #equalizerMobileAccueil {
     display: block;
     position: absolute;
     height: 340px;
@@ -33,20 +35,127 @@
   }
 }
 
-.secondEqua {
+/* //////// */
+
+/* Equalizer page Carlist comprenant la version desktop et mobile! */
+.equalizer2 {
   position: relative;
 }
 
-#equaOpacity {
+#equalizerCard {
   position: absolute;
   height: 83vh;
   top: -781px;
-  left: 79px;
-  z-index: 6;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
   opacity: 50%;
-  margin: auto;
 }
 
+#equalizerMobileCard {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  #equalizerCard {
+    display: none;
+  }
+
+  #equalizerMobileCard {
+    display: block;
+    position: absolute;
+    height: 340px;
+    top: -225px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    opacity: 50%;
+  }
+}
+
+/* ////// */
+
+/* Equalizer Pages Evenement. Comprenant desktop et mobile */
+
+.equalizer3 {
+  position: relative;
+}
+
+#equalizerParty {
+  position: absolute;
+  height: 83vh;
+  top: -781px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  opacity: 50%;
+}
+
+#equalizerMobileParty {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  #equalizerParty {
+    display: none;
+  }
+
+  #equalizerMobileParty {
+    display: block;
+    position: absolute;
+    height: 340px;
+    top: -222px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    opacity: 50%;
+  }
+}
+/* ////// */
+
+/* Eqializer Pages Contact. Comprenant: Desktop et Mobile  */
+.equalizer4 {
+  position: relative;
+}
+
+#equalizerForm {
+  position: absolute;
+  height: 83vh;
+  top: -523px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  opacity: 50%;
+  z-index: 0;
+}
+
+#equalizerMobileForm {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  #equalizerForm {
+    display: none;
+  }
+
+  #equalizerMobileForm {
+    display: block;
+    position: absolute;
+    height: 340px;
+    top: -102px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    opacity: 50%;
+  }
+}
+/* /////// */
 .logo {
   display: flex;
   justify-content: center;
