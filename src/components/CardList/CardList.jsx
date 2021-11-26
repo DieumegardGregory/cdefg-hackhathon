@@ -1,101 +1,102 @@
 import React, { useRef, useState, useEffect } from "react";
 import ReactPlayer from "react-player";
-import axios from 'axios';
+import axios from "axios";
 import "../Weather.css";
 import "./CardList.css";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
 export default function CardList() {
-  const slideRef = useRef();
-  const style = {
-    textAlign: "center",
-    background: "teal",
-    padding: "200px 0",
-    fontSize: "30px",
-  };
-  const properties = {
-    autoplay: false,
-    arrows: false,
-    infinite: true,
-  };
+  // const slideRef = useRef();
+  // const style = {
+  //   textAlign: "center",
+  //   background: "teal",
+  //   padding: "200px 0",
+  //   fontSize: "30px",
+  // };
+  // const properties = {
+  //   autoplay: false,
+  //   arrows: false,
+  //   infinite: true,
+  // };
 
-  // The "goBack()" method shows the previous slide while "goNext()" shows the next slide. The "goTo(index)" method goes to a particular index. It takes an integer as the parameter.
-  const back = () => {
-    slideRef.current.goBack();
-  };
-  const next = () => {
-    slideRef.current.goNext();
-  };
-  const goto = ({ target }) => {
-    slideRef.current.goTo(parseInt(target.value, 10));
-  };
-  
-  const API_KEY = 'AIzaSyD_uh3m3hom9GvzZ84yUSFhXX2GLR-07uw';
-  const [mood, setMood] = useState('');
+  // // The "goBack()" method shows the previous slide while "goNext()" shows the next slide. The "goTo(index)" method goes to a particular index. It takes an integer as the parameter.
+  // const back = () => {
+  //   slideRef.current.goBack();
+  // };
+  // const next = () => {
+  //   slideRef.current.goNext();
+  // };
+  // const goto = ({ target }) => {
+  //   slideRef.current.goTo(parseInt(target.value, 10));
+  // };
+
+  const API_KEY = "AIzaSyD_uh3m3hom9GvzZ84yUSFhXX2GLR-07uw";
+  const [mood, setMood] = useState("");
   const [playMode, setPlayMode] = useState(false);
   const [playlists, setPlaylists] = useState([]);
   const [rain, setRain] = useState("Card sad");
-    
-   useEffect(() => {
-   axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&order=rating&q=${mood}%20songs&key=${API_KEY}`)
-  .then((data) => {
-    console.log(data.data.items);
-    setPlaylists(data.data.items)}
-    )
-  .catch((err)=> console.error(err.message))
-    }, [mood]);
 
+  useEffect(() => {
+    axios
+      .get(
+        `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&order=rating&q=${mood}%20songs&key=${API_KEY}`
+      )
+      .then((data) => {
+        console.log(data.data.items);
+        setPlaylists(data.data.items);
+      })
+      .catch((err) => console.error(err.message));
+  }, [mood]);
 
   const handleSad = () => {
-      setMood('sad+');
-      setRain("Card sad weather rain");
-      setPlayMode(!playMode);
-    }
+    setMood("sad+");
+    setRain("Card sad weather rain");
+    setPlayMode(!playMode);
+  };
   const handleHappy = () => {
-      setMood('goodmood+');
-      setPlayMode(!playMode);
-    }
+    setMood("goodmood+");
+    setPlayMode(!playMode);
+  };
   const handleAngry = () => {
-      setMood('rage+');
-      setPlayMode(!playMode);
-    }
+    setMood("rage+");
+    setPlayMode(!playMode);
+  };
   const handleSport = () => {
-      setMood('training+workout+');
-      setPlayMode(!playMode);
-    }
+    setMood("training+workout+");
+    setPlayMode(!playMode);
+  };
   const handleEpic = () => {
-      setMood('epic+');
-      setPlayMode(!playMode);
-    }
+    setMood("epic+");
+    setPlayMode(!playMode);
+  };
   const handleChildish = () => {
-      setMood('childrensong+');
-      setPlayMode(!playMode);
-    }
+    setMood("childrensong+");
+    setPlayMode(!playMode);
+  };
   const handleRomantic = () => {
-      setMood('love+');
-      setPlayMode(!playMode);
-    }
+    setMood("love+");
+    setPlayMode(!playMode);
+  };
   const handleCalm = () => {
-      setMood('zen+');
-      setPlayMode(!playMode);
-    }
+    setMood("zen+");
+    setPlayMode(!playMode);
+  };
   const handleComic = () => {
-      setMood('songs+funny+');
-      setPlayMode(!playMode);
-    }
+    setMood("songs+funny+");
+    setPlayMode(!playMode);
+  };
   const handleHot = () => {
-      setMood('seduction+');
-      setPlayMode(!playMode);
-    }
+    setMood("seduction+");
+    setPlayMode(!playMode);
+  };
   const handleStop = () => {
-      setPlayMode(!playMode);
-      setMood('');
-    }
+    setPlayMode(!playMode);
+    setMood("");
+  };
 
   return (
     <div className="CardList">
-      <div className="desktop">
       <div className={rain}>
         <div className="headerCard">
           <p>
@@ -104,9 +105,26 @@ export default function CardList() {
           <p>Sad</p>
         </div>
         <div className="thumbnail">
-          {playMode ? <img className="stop" src="assets/stop.png" alt="stop-btn" onClick={handleStop}/> :
-          <img className="play" src="assets/play.png" alt="play-btn" onClick={handleSad}/>}
-          <img className="mood-thumbnail" src="https://i.ytimg.com/vi/nQDJfnrGq5A/mqdefault.jpg" alt="sad-thumbnail" />
+          {playMode ? (
+            <img
+              className="stop"
+              src="assets/stop.png"
+              alt="stop-btn"
+              onClick={handleStop}
+            />
+          ) : (
+            <img
+              className="play"
+              src="assets/play.png"
+              alt="play-btn"
+              onClick={handleSad}
+            />
+          )}
+          <img
+            className="mood-thumbnail"
+            src="https://i.ytimg.com/vi/nQDJfnrGq5A/mqdefault.jpg"
+            alt="sad-thumbnail"
+          />
         </div>
       </div>
       <div className="Card happy">
@@ -117,10 +135,26 @@ export default function CardList() {
           <p>Happy</p>
         </div>
         <div className="thumbnail">
-
-        {playMode ? <img className="stop" src="assets/stop.png" alt="stop-btn" onClick={handleStop}/> :
-          <img className="play" src="assets/play.png" alt="play-btn" onClick={handleHappy}/>}
-          <img className="mood-thumbnail" src="https://i.ytimg.com/vi/MWKki0K5yCM/mqdefault.jpg" alt="happy thumbnail" />
+          {playMode ? (
+            <img
+              className="stop"
+              src="assets/stop.png"
+              alt="stop-btn"
+              onClick={handleStop}
+            />
+          ) : (
+            <img
+              className="play"
+              src="assets/play.png"
+              alt="play-btn"
+              onClick={handleHappy}
+            />
+          )}
+          <img
+            className="mood-thumbnail"
+            src="https://i.ytimg.com/vi/MWKki0K5yCM/mqdefault.jpg"
+            alt="happy thumbnail"
+          />
         </div>
       </div>
       <div className="Card angry">
@@ -131,9 +165,26 @@ export default function CardList() {
           <p>Angry</p>
         </div>
         <div className="thumbnail">
-        {playMode ? <img className="stop" src="assets/stop.png" alt="stop-btn" onClick={handleStop}/> :
-          <img className="play" src="assets/play.png" alt="play-btn" onClick={handleAngry}/>}
-        <img className="mood-thumbnail" src="https://i.ytimg.com/vi/7PSS1i-mgFI/mqdefault.jpg" alt="angry thumbnail" />
+          {playMode ? (
+            <img
+              className="stop"
+              src="assets/stop.png"
+              alt="stop-btn"
+              onClick={handleStop}
+            />
+          ) : (
+            <img
+              className="play"
+              src="assets/play.png"
+              alt="play-btn"
+              onClick={handleAngry}
+            />
+          )}
+          <img
+            className="mood-thumbnail"
+            src="https://i.ytimg.com/vi/7PSS1i-mgFI/mqdefault.jpg"
+            alt="angry thumbnail"
+          />
         </div>
       </div>
       <div className="Card sporty">
@@ -144,9 +195,26 @@ export default function CardList() {
           <p>Sporty</p>
         </div>
         <div className="thumbnail">
-        {playMode ? <img className="stop" src="assets/stop.png" alt="stop-btn" onClick={handleStop}/> :
-          <img className="play" src="assets/play.png" alt="play-btn" onClick={handleSport}/>}
-        <img className="mood-thumbnail" src="https://i.ytimg.com/vi/04LoyBnywRY/mqdefault.jpg" alt="sport thumbnail" />
+          {playMode ? (
+            <img
+              className="stop"
+              src="assets/stop.png"
+              alt="stop-btn"
+              onClick={handleStop}
+            />
+          ) : (
+            <img
+              className="play"
+              src="assets/play.png"
+              alt="play-btn"
+              onClick={handleSport}
+            />
+          )}
+          <img
+            className="mood-thumbnail"
+            src="https://i.ytimg.com/vi/04LoyBnywRY/mqdefault.jpg"
+            alt="sport thumbnail"
+          />
         </div>
       </div>
       <div className="Card epic">
@@ -157,9 +225,26 @@ export default function CardList() {
           <p>Epic</p>
         </div>
         <div className="thumbnail">
-        {playMode ? <img className="stop" src="assets/stop.png" alt="stop-btn" onClick={handleStop}/> :
-          <img className="play" src="assets/play.png" alt="play-btn" onClick={handleEpic}/>}
-        <img className="mood-thumbnail" src="https://i.ytimg.com/vi/LqOfPkHGq9U/mqdefault.jpg" alt="epic thumbnail" />
+          {playMode ? (
+            <img
+              className="stop"
+              src="assets/stop.png"
+              alt="stop-btn"
+              onClick={handleStop}
+            />
+          ) : (
+            <img
+              className="play"
+              src="assets/play.png"
+              alt="play-btn"
+              onClick={handleEpic}
+            />
+          )}
+          <img
+            className="mood-thumbnail"
+            src="https://i.ytimg.com/vi/LqOfPkHGq9U/mqdefault.jpg"
+            alt="epic thumbnail"
+          />
         </div>
       </div>
       <div className="Card chlid">
@@ -170,9 +255,26 @@ export default function CardList() {
           <p>Childish</p>
         </div>
         <div className="thumbnail">
-        {playMode ? <img className="stop" src="assets/stop.png" alt="stop-btn" onClick={handleStop}/> :
-          <img className="play" src="assets/play.png" alt="play-btn" onClick={handleChildish}/>}
-        <img className="mood-thumbnail" src="https://i.ytimg.com/vi/KFpNvN3nQDw/mqdefault.jpg" alt="childish thumbnail" />
+          {playMode ? (
+            <img
+              className="stop"
+              src="assets/stop.png"
+              alt="stop-btn"
+              onClick={handleStop}
+            />
+          ) : (
+            <img
+              className="play"
+              src="assets/play.png"
+              alt="play-btn"
+              onClick={handleChildish}
+            />
+          )}
+          <img
+            className="mood-thumbnail"
+            src="https://i.ytimg.com/vi/KFpNvN3nQDw/mqdefault.jpg"
+            alt="childish thumbnail"
+          />
         </div>
       </div>
       <div className="Card calm">
@@ -183,9 +285,26 @@ export default function CardList() {
           <p>Calm</p>
         </div>
         <div className="thumbnail">
-        {playMode ? <img className="stop" src="assets/stop.png" alt="stop-btn" onClick={handleStop}/> :
-          <img className="play" src="assets/play.png" alt="play-btn" onClick={handleCalm}/>}
-        <img className="mood-thumbnail" src="https://i.ytimg.com/vi/44uRirC7vLw/mqdefault.jpg" alt="calm thumbnail" />
+          {playMode ? (
+            <img
+              className="stop"
+              src="assets/stop.png"
+              alt="stop-btn"
+              onClick={handleStop}
+            />
+          ) : (
+            <img
+              className="play"
+              src="assets/play.png"
+              alt="play-btn"
+              onClick={handleCalm}
+            />
+          )}
+          <img
+            className="mood-thumbnail"
+            src="https://i.ytimg.com/vi/44uRirC7vLw/mqdefault.jpg"
+            alt="calm thumbnail"
+          />
         </div>
       </div>
       <div className="Card romance">
@@ -196,9 +315,26 @@ export default function CardList() {
           <p>Romantic</p>
         </div>
         <div className="thumbnail">
-        {playMode ? <img className="stop" src="assets/stop.png" alt="stop-btn" onClick={handleStop}/> :
-          <img className="play" src="assets/play.png" alt="play-btn" onClick={handleRomantic}/>}
-        <img className="mood-thumbnail" src="https://i.ytimg.com/vi/W18nAXue7hM/mqdefault.jpg" alt="romantic thumbnail" />
+          {playMode ? (
+            <img
+              className="stop"
+              src="assets/stop.png"
+              alt="stop-btn"
+              onClick={handleStop}
+            />
+          ) : (
+            <img
+              className="play"
+              src="assets/play.png"
+              alt="play-btn"
+              onClick={handleRomantic}
+            />
+          )}
+          <img
+            className="mood-thumbnail"
+            src="https://i.ytimg.com/vi/W18nAXue7hM/mqdefault.jpg"
+            alt="romantic thumbnail"
+          />
         </div>
       </div>
       <div className="Card comedy">
@@ -209,9 +345,26 @@ export default function CardList() {
           <p>Comic</p>
         </div>
         <div className="thumbnail">
-        {playMode ? <img className="stop" src="assets/stop.png" alt="stop-btn" onClick={handleStop}/> :
-          <img className="play" src="assets/play.png" alt="play-btn" onClick={handleComic}/>}
-        <img className="mood-thumbnail" src="https://i.ytimg.com/vi/pOmu0LtcI6Y/mqdefault.jpg" alt="comedy thumbnail" />
+          {playMode ? (
+            <img
+              className="stop"
+              src="assets/stop.png"
+              alt="stop-btn"
+              onClick={handleStop}
+            />
+          ) : (
+            <img
+              className="play"
+              src="assets/play.png"
+              alt="play-btn"
+              onClick={handleComic}
+            />
+          )}
+          <img
+            className="mood-thumbnail"
+            src="https://i.ytimg.com/vi/pOmu0LtcI6Y/mqdefault.jpg"
+            alt="comedy thumbnail"
+          />
         </div>
       </div>
       <div className="Card hot">
@@ -222,21 +375,41 @@ export default function CardList() {
           <p>Hot</p>
         </div>
         <div className="thumbnail">
-         {playMode ? <img className="stop" src="assets/stop.png" alt="stop-btn" onClick={handleStop}/> :
-          <img className="play" src="assets/play.png" alt="play-btn" onClick={handleHot}/>}
+          {playMode ? (
+            <img
+              className="stop"
+              src="assets/stop.png"
+              alt="stop-btn"
+              onClick={handleStop}
+            />
+          ) : (
+            <img
+              className="play"
+              src="assets/play.png"
+              alt="play-btn"
+              onClick={handleHot}
+            />
+          )}
           <img
             className="mood-thumbnail"
             src="https://i.ytimg.com/vi/OjholJBpYic/mqdefault.jpg"
             alt="hot thumbnail"
           />
-         </div>
-       </div>
-  </div>
-        {mood !== '' ? 
-        <div className="hidden-player">
-           
-          <ReactPlayer playing={true} url={playlists[0].id.videoId ? `https://www.youtube.com/watch?v=${playlists[0].id.videoId}` : 'https://www.youtube.com/watch?v=Jl8fV1jUQPs'} 
-            /> </div> : null}
+        </div>
       </div>
+
+      {mood !== "" ? (
+        <div className="hidden-player">
+          <ReactPlayer
+            playing={true}
+            url={
+              playlists[0].id.videoId
+                ? `https://www.youtube.com/watch?v=${playlists[0].id.videoId}`
+                : "https://www.youtube.com/watch?v=Jl8fV1jUQPs"
+            }
+          />{" "}
+        </div>
+      ) : null}
+    </div>
   );
 }
