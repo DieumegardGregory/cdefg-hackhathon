@@ -7,7 +7,7 @@
 #equalizerAccueil {
   position: absolute;
   height: 86vh;
-  bottom: -428px;
+  bottom: -398px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -66,11 +66,12 @@
     display: block;
     position: absolute;
     height: 340px;
-    top: 158px;
+    top: -225px;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
+    opacity: 50%;
   }
 }
 
@@ -106,11 +107,12 @@
     display: block;
     position: absolute;
     height: 340px;
-    top: 158px;
+    top: -222px;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
+    opacity: 50%;
   }
 }
 /* ////// */
@@ -145,11 +147,12 @@
     display: block;
     position: absolute;
     height: 340px;
-    top: 158px;
+    top: -102px;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
+    opacity: 50%;
   }
 }
 /* /////// */
