@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CardList/CardList.css";
 
 export default function PartyList() {
+  const [snow, setSnow] = useState("Card angry");
+  //handleChristmas : setSnow("Card angry weather snow")
   return (
     <div className="card-party-list">
       <div className="Card happy">
@@ -15,7 +17,7 @@ export default function PartyList() {
           <video>insert youtube video</video>
         </div>
       </div>
-      <div className="Card angry">
+      <div className={snow}>
         <div className="headerCard">
           <p>
             <img src="assets/party-christmas-01.png" alt="angrychristmas" />
