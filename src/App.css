@@ -6,7 +6,10 @@
   position: absolute;
   height: 86vh;
   bottom: -397px;
-  left: 36px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
 #equalizerMobile {
@@ -22,7 +25,11 @@
     display: block;
     position: absolute;
     height: 340px;
-    top: 495px;
+    top: 158px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
   }
 }
 
@@ -37,9 +44,22 @@
   left: 79px;
   z-index: 6;
   opacity: 50%;
+  margin: auto;
 }
 
 .logo {
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .logo {
+    height: 144px;
+    position: relative;
+    top: 72px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+  }
 }
