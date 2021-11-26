@@ -53,6 +53,7 @@ function App() {
           element={
             <div>
               <Header title={partyTitle} />
+              <PartyList />
             </div>
           }
         />
