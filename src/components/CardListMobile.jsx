@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Slide } from "react-slideshow-image";
-// import "react-slideshow-image/dist/style.css";
+import "react-slideshow-image/dist/style.css";
 
 function CardListMobile() {
   const slideRef = useRef();
@@ -34,7 +34,17 @@ function CardListMobile() {
     <div>
       <div>
         <Slide ref={slideRef} {...properties}>
-          <div style={style}>Carte 1</div>
+          <div style={style} className="Card sad">
+        <div className="headerCard">
+          <p>
+            <img src="assets/mood-sad-01.png" alt="sad" />
+          </p>
+          <p>Sad</p>
+        </div>
+        <div className="video">
+          <video>insert youtube video</video>
+        </div>
+      </div>
           <div style={style}>Carte 2</div>
           <div style={style}>Carte 3</div>
         </Slide>

@@ -105,3 +105,13 @@ video {
   border: solid 3px hsl(0, 100%, 44%);
   background-color: white;
 }
+
+@media screen and (max-width: 400px) {
+  .mobile {
+    display: block;
+    background-color: blueviolet;
+  }
+  .desktop {
+    display: none;
+  }
+}

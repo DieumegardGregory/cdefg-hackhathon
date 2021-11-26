@@ -62,11 +62,7 @@ function App() {
           element={
             <div>
               <Header title={contactTitle} />
-<<<<<<< HEAD
               <Formulaire/>
-=======
-              <Formulaire />
->>>>>>> 68072f96cbfa066e38bcf0ef383c5608325b19a1
             </div>
           }
         />
