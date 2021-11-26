@@ -56,12 +56,12 @@ p {
   margin-top: 3rem;
 }
 
-.play {
+.play,
+.stop {
   position: absolute;
   height: 100px;
   width: 100px;
   cursor: pointer;
-  background-color: black;
 }
 
 .Card.sad {
@@ -120,6 +120,6 @@ p {
   width: 95%;
 }
 
-/* .hidden-player {
+.hidden-player {
   visibility: hidden;
-} */
+}

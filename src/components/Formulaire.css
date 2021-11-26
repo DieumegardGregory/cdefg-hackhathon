@@ -29,8 +29,17 @@ textarea {
   height: 10rem;
 }
 
+#lastName,
+#firstName {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+input {
+  width: 100%;
+}
+
 label,
-input,
 textarea {
   display: block;
   width: 100%;
@@ -58,7 +67,7 @@ button:hover {
   transform: translateY(3px);
 }
 
-button:active {
+.Submit:active {
   background-color: hsl(300, 45%, 74%);
   color: hsl(300, 100%, 31%);
   box-shadow: 0 0.1em;

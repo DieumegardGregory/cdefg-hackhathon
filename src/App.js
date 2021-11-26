@@ -10,6 +10,7 @@ import CardList from "./components/CardList/CardList";
 import Header from "./components/Header";
 import HeaderHome from "./components/HeaderHome";
 import PartyList from "./components/PartyList";
+
 function App() {
   const moodTitle = "What's your mood ?";
   const partyTitle = "Choose your event !";
