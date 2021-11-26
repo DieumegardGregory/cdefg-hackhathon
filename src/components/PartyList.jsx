@@ -60,7 +60,7 @@ export default function PartyList() {
           <img className="play" src="assets/play.png" alt="play-btn" onClick={handleHalloween}/>}
           <img className="mood-thumbnail" src="https://i.ytimg.com/vi/oAz2HDn-12I/mqdefault.jpg" alt="halloween" />        </div>
       </div>
-      <div className="Card angry">
+      <div className="Card angry christmas">
         <div className="headerCard">
           <p>
             <img src="assets/party-christmas-01.png" alt="angrychristmas" />

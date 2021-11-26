@@ -26,7 +26,7 @@ export default function CardList() {
       setPlayMode(!playMode);
     }
     const handleHappy = () => {
-      setMood('happy+');
+      setMood('goodmood+');
       setPlayMode(!playMode);
     }
     const handleAngry = () => {
@@ -34,7 +34,7 @@ export default function CardList() {
       setPlayMode(!playMode);
     }
     const handleSport = () => {
-      setMood('workout+');
+      setMood('training+workout+');
       setPlayMode(!playMode);
     }
     const handleEpic = () => {

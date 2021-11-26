@@ -128,3 +128,24 @@ p {
   border: solid 3px hsl(0, 100%, 44%);
   background-color: white;
 }
+
+/* css christmas */
+.christmas {
+  background: rgba(10, 10, 60, 1);
+}
+.dot {
+  background: white;
+  height: 2px;
+  width: 2px;
+  border-radius: 50%;
+  animation: snowfall linear 4s infinite;
+}
+
+@keyframes snowfall {
+  from {
+    margin-bottom: 100%;
+  }
+  to {
+    margin-bottom: -100%;
+  }
+}
