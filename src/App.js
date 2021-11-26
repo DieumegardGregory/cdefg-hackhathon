@@ -1,15 +1,15 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
+
 import equalizer from "./assets/background-01.png";
 import equalizerMobile from "./assets/background-mobi-01.png";
 import logoAccueil from "./assets/logo accueil-01.png";
+
 import CardList from "./components/CardList/CardList";
 import Header from "./components/Header";
 import HeaderHome from "./components/HeaderHome";
 import MoodSelector from "./components/MoodSelector/MoodSelector";
 import PartyList from "./components/PartyList";
-
-
 function App() {
   const moodTitle = "What's your mood ?";
   const partyTitle = "Choose your event !";
@@ -32,9 +32,6 @@ function App() {
                   alt="Equalizer"
                   id="equalizerMobile"
                 />
-              <div className="relative">
-                <img src={equalizer} alt="Equalizer" id="equa" />
-
               </div>
             </div>
           }
@@ -56,7 +53,6 @@ function App() {
           element={
             <div>
               <Header title={partyTitle} />
-              <PartyList />
             </div>
           }
         />
