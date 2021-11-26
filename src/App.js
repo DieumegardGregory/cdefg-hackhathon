@@ -7,11 +7,8 @@ import logoAccueil from "./assets/logo accueil-01.png";
 import CardList from "./components/CardList/CardList";
 import Header from "./components/Header";
 import HeaderHome from "./components/HeaderHome";
-<<<<<<< HEAD
-=======
-import MoodSelector from "./components/MoodSelector/MoodSelector";
 import PartyList from "./components/PartyList";
->>>>>>> 68072f96cbfa066e38bcf0ef383c5608325b19a1
+
 
 function App() {
   const moodTitle = "What's your mood ?";

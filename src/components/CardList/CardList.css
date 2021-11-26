@@ -42,19 +42,42 @@ p {
   font-size: 25px;
 }
 
-video {
+.thumbnail {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   box-shadow: 10px 10px 10px hsl(0, 0%, 60%);
   border: solid 1px hsl(15, 3%, 70%);
   border-radius: 5px;
   margin: auto;
   width: 90%;
-  height: auto;
+  height: 40%;
   margin-top: 3rem;
-  cursor: pointer;
   background-color: black;
 }
 
+.mood-thumbnail {
+  height: 95%;
+  width: 95%;
+}
+
+.play, .stop {
+  position: absolute;
+  height: 80%;
+  width: 60%;
+  cursor: pointer;
+  animation: blink alternate-reverse infinite 3s;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .Card.sad {
   box-shadow: 10px 10px 10px hsl(197, 97%, 35%);
   border: solid 3px hsl(197, 97%, 35%);
