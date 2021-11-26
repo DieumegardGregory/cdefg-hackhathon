@@ -54,16 +54,30 @@ p {
   width: 90%;
   height: 40%;
   margin-top: 3rem;
-}
-
-.play {
-  position: absolute;
-  height: 100px;
-  width: 100px;
-  cursor: pointer;
   background-color: black;
 }
 
+.mood-thumbnail {
+  height: 95%;
+  width: 95%;
+}
+
+.play, .stop {
+  position: absolute;
+  height: 80%;
+  width: 60%;
+  cursor: pointer;
+  animation: blink alternate-reverse infinite 3s;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .Card.sad {
   box-shadow: 10px 10px 10px hsl(197, 97%, 35%);
   border: solid 3px hsl(197, 97%, 35%);
@@ -115,6 +129,7 @@ p {
   background-color: white;
 }
 
+
 .mood-thumbnail {
   height: 95%;
   width: 95%;
@@ -123,3 +138,4 @@ p {
 /* .hidden-player {
   visibility: hidden;
 } */
+
