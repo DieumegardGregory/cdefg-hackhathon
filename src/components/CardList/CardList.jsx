@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from 'react';
 import ReactPlayer from "react-player";
 import axios from 'axios';
-
+import "../Weather.css";
 import "./CardList.css";
 
 export default function CardList() {
@@ -11,6 +11,7 @@ export default function CardList() {
     const [mood, setMood] = useState('');
     const [playMode, setPlayMode] = useState(false);
     const [playlists, setPlaylists] = useState([]);
+    const [rain, setRain] = useState("Card sad");
     
    useEffect(() => {
    axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&order=rating&q=${mood}%20songs&key=${API_KEY}`)
@@ -23,6 +24,7 @@ export default function CardList() {
 
     const handleSad = () => {
       setMood('sad+');
+      setRain("Card sad weather rain");
       setPlayMode(!playMode);
     }
     const handleHappy = () => {
@@ -65,9 +67,10 @@ export default function CardList() {
       setPlayMode(!playMode);
       setMood('');
     }
+
   return (
     <div className="CardList">
-      <div className="Card sad">
+      <div className={rain}>
         <div className="headerCard">
           <p>
             <img src="assets/mood-sad-01.png" alt="sad" />
@@ -88,6 +91,7 @@ export default function CardList() {
           <p>Happy</p>
         </div>
         <div className="thumbnail">
+
         {playMode ? <img className="stop" src="assets/stop.png" alt="stop-btn" onClick={handleStop}/> :
           <img className="play" src="assets/play.png" alt="play-btn" onClick={handleHappy}/>}
           <img className="mood-thumbnail" src="https://i.ytimg.com/vi/MWKki0K5yCM/mqdefault.jpg" alt="happy thumbnail" />

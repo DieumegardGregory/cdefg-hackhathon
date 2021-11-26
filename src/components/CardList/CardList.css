@@ -129,23 +129,13 @@ p {
   background-color: white;
 }
 
-/* css christmas */
-.christmas {
-  background: rgba(10, 10, 60, 1);
-}
-.dot {
-  background: white;
-  height: 2px;
-  width: 2px;
-  border-radius: 50%;
-  animation: snowfall linear 4s infinite;
+
+.mood-thumbnail {
+  height: 95%;
+  width: 95%;
 }
 
-@keyframes snowfall {
-  from {
-    margin-bottom: 100%;
-  }
-  to {
-    margin-bottom: -100%;
-  }
-}
+/* .hidden-player {
+  visibility: hidden;
+} */
+

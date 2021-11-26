@@ -8,6 +8,7 @@ export default function PartyList() {
     const [mood, setMood] = useState('');
     const [playMode, setPlayMode] = useState(false);
     const [playlists, setPlaylists] = useState([]);
+    const [snow, setSnow] = useState("Card angry");
 
     useEffect(() => {
       axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=${mood}%20songs&key=${API_KEY}`)
@@ -24,6 +25,7 @@ export default function PartyList() {
       }
       const handleXmas = () => {
         setMood('christmas+');
+        setSnow("Card angry weather snow");
         setPlayMode(!playMode);
       }
       const handleBirthday = () => {
@@ -46,6 +48,7 @@ export default function PartyList() {
         setPlayMode(!playMode);
         setMood('');
       }
+
   return (
     <div className="card-party-list">
       <div className="Card happy">
@@ -60,7 +63,8 @@ export default function PartyList() {
           <img className="play" src="assets/play.png" alt="play-btn" onClick={handleHalloween}/>}
           <img className="mood-thumbnail" src="https://i.ytimg.com/vi/oAz2HDn-12I/mqdefault.jpg" alt="halloween" />        </div>
       </div>
-      <div className="Card angry christmas">
+      <div className={snow}>
+
         <div className="headerCard">
           <p>
             <img src="assets/party-christmas-01.png" alt="angrychristmas" />
